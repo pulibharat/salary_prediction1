@@ -73,4 +73,4 @@ OUTPUT:
 Gradient Boost Accuracy: 0.8537
 Saved
 ```
-![Prediction Output](images\Screenshot 2025-07-22 122218.png)
+
