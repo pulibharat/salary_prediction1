@@ -46,9 +46,28 @@ This is a Streamlit-based web app that predicts whether a person's income is abo
 - Capital Gain  
 - Capital Loss  
 
-## 🧪 Model Training
+## 🧪 Model Training & Saving
 
 ```python
-from sklearn.ensemble import RandomForestClassifier
-model = RandomForestClassifier()
-model.fit(X_train, y_train)
+from sklearn.ensemble import GradientBoostingClassifier
+from sklearn.metrics import accuracy_score
+import joblib
+
+# Initialize and train the Gradient Boosting Classifier
+model = GradientBoostingClassifier()
+model.fit(xtrain, ytrain)
+
+# Predict on the test set
+y_pred = model.predict(xtest)
+
+# Calculate and display accuracy
+acc = accuracy_score(ytest, y_pred)
+print(f"Gradient Boost Accuracy: {acc:.4f}")
+
+# Save the trained model
+joblib.dump(model, "best_model.pkl")
+print("Saved Gradient Boost model as best_model.pkl")
+
+Gradient Boost Accuracy: 0.8537
+Saved
+
