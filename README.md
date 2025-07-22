@@ -68,6 +68,7 @@ print(f"Gradient Boost Accuracy: {acc:.4f}")
 joblib.dump(model, "best_model.pkl")
 print("Saved Gradient Boost model as best_model.pkl")
 
+OUTPUT:
 Gradient Boost Accuracy: 0.8537
 Saved
 
